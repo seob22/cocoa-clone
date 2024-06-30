@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseball Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <span>야챗</span>
+            <div class="header-icons">
+                <span class="icon">🔔</span>
+                <span class="icon">👤</span>
+                <span class="icon">⚙️</span>
+            </div>
+        </header>
+        <nav>
+            <div class="nav-item active" data-screen="home">⚾️ 일정</div>
+            <div class="nav-item" data-screen="chat">🏆 순위</div>
+            <div class="nav-item" data-screen="call">✉️ 채팅</div>
+        </nav>
+        <main id="home-screen" class="screen active">
+            <div class="header">
+                <h1>오늘의 일정</h1>
+                <div id="calendar"></div>
+            </div>
+            <div class="schedule">
+                <div class="game">
+                    <div class="time">17:00</div>
+                    <div class="match">SSG VS 두산 잠실</div>
+                </div>
+                <div class="game">
+                    <div class="time">17:00</div>
+                    <div class="match">한화 VS 롯데 사직</div>
+                </div>
+                <div class="game">
+                    <div class="time">17:00</div>
+                    <div class="match">키움 VS KIA 광주</div>
+                </div>
+                <div class="game">
+                    <div class="time">17:00</div>
+                    <div class="match">LG VS NC 창원</div>
+                </div>
+                <div class="game">
+                    <div class="time">17:55</div>
+                    <div class="match">삼성 VS KT 수원</div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <div class="friends">
+        <div class="group">
+            <h2 id="friends-toggle">친구 10</h2>
+            <div id="friends-list">
+                <div class="friend" data-friend="suri">수리</div>
+                <div class="friend" data-friend="randy">랜디</div>
+                <div class="friend" data-friend="chulwoong">철웅이</div>
+                <div class="friend" data-friend="lucky">럭키</div>
+                <div class="friend" data-friend="bigto">빅또리</div>
+                <div class="friend" data-friend="leo">레오</div>
+                <div class="friend" data-friend="dandy">단디</div>
+                <div class="friend" data-friend="winzi">윈지</div>
+                <div class="friend" data-friend="harang">하랑이</div>
+                <div class="friend" data-friend="turkdo">턱돌이</div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <main id="chat-screen" class="screen">
+        <div class="랭크">
+            <div class="Rank-item">
+                <div class="rank">1</div>
+                <div class="team">KIA</div>
+                <div class="stats">80경기 45승 2무 33패</div>
+                <div class="rate">승률 0.577</div>
+                <div class="games-back">게임차 0</div>
+            </div>
+            <div class="Rank-item">
+                <div class="rank">2</div>
+                <div class="team">LG</div>
+                <div class="stats">83경기 45승 2무 36패</div>
+                <div class="rate">승률 0.556</div>
+                <div class="games-back">게임차 1.5</div>
+            </div>
+            <div class="Rank-item">
+                <div class="rank">3</div>
+                <div class="team">삼성</div>
+                <div class="stats">82경기 44승 2무 36패</div>
+                <div class="rate">0.550</div>
+                <div class="games-back">게임차 2</div>
+            </div>
+            <div class="Rank-item">
+                <div class="rank">4</div>
+                <div class="team">두산</div>
+                <div class="stats">85경기 44승 2무 39패</div>
+                <div class="rate">0.530</div>
+                <div class="games-back">게임차 3.5</div>
+            </div>
+            <div class="Rank-item">
+                <div class="rank">5</div>
+                <div class="team">SSG</div>
+                <div class="stats">82경기 41승 1무 40패</div>
+                <div class="rate">0.506</div>
+                <div class="games-back">게임차 5.5</div>
+            </div>
+            <div class="Rank-item">
+                <div class="rank">6</div>
+                <div class="team">NC</div>
+                <div class="stats">81경기 38승 2무 41패</div>
+                <div class="rate">0.481</div>
+                <div class="games-back">게임차 7.5</div>
+            </div>
+            <div class="Rank-item">
+                <div class="rank">7</div>
+                <div class="team">롯데</div>
+                <div class="stats">78경기 3승 3무 40패</div>
+                <div class="rate">0.467</div>
+                <div class="games-back">게임차 8.5</div>
+            </div>
+            <div class="Rank-item">
+                <div class="rank">8</div>
+                <div class="team">한화</div>
+                <div class="stats">79경기 35승 2무 42패</div>
+                <div class="rate">0.455</div>
+                <div class="games-back">게임차 9.5</div>
+            </div>
+            <div class="Rank-item">
+                <div class="rank">9</div>
+                <div class="team">KT</div>
+                <div class="stats">82경기 36승 2무 44패</div>
+                <div class="rate">0.450</div>
+                <div class="games-back">게임차 10</div>
+            </div>
+            <div class="Rank-item">
+                <div class="rank">10</div>
+                <div class="team">키움</div>
+                <div class="stats">78경기 33승 0무 45패</div>
+                <div class="rate">0.423</div>
+                <div class="games-back">게임차 12</div>
+            </div>
+        </div>
+    </main>
+
+    <main id="call-screen" class="screen">
+        <div class="chat-list">
+
+            <div class="chat-item" data-friend="suri">
+                <div class="avatar">S</div>
+                <div class="message-summary">
+                    <div class="name">수리</div>
+                    <div class="text"> 야구 시작한다!!</div>
+                    <div class="time">18:30</div>
+                </div>
+            </div>
+            <div class="chat-item" data-friend="randy">
+                <div class="avatar">R</div>
+                <div class="message-summary">
+                    <div class="name">랜디</div>
+                    <div class="text">오늘 날씨 어때?</div>
+                    <div class="time">19:30</div>
+                </div>
+            </div>
+            <div class="chat-item" data-friend="chulwoong">
+                <div class="avatar">C</div>
+                <div class="message-summary">
+                    <div class="name">철웅이</div>
+                    <div class="text">오늘 진짜 못하네..</div>
+                    <div class="time">19:40</div>
+                </div>
+            </div>
+            <div class="chat-item" data-friend="lucky">
+                <div class="avatar">L</div>
+                <div class="message-summary">
+                    <div class="name">럭키</div>
+                    <div class="text">오늘 왜저래??</div>
+                    <div class="time">20:00</div>
+                </div>
+            </div>
+            <div class="chat-item" data-friend="bigto">
+                <div class="avatar">B</div>
+                <div class="message-summary">
+                    <div class="name">빅또리</div>
+                    <div class="text">오늘도 이겼다~!!</div>
+                    <div class="time">21:10</div>
+                </div>
+            </div>
+            <div class="chat-item" data-friend="leo">
+                <div class="avatar">L</div>
+                <div class="message-summary">
+                    <div class="name">레오</div>
+                    <div class="text">날씨 진짜 더워 ㅠㅠ</div>
+                    <div class="time">21:11</div>
+                </div>
+            </div>
+            <div class="chat-item" data-friend="dandy">
+                <div class="avatar">D</div>
+                <div class="message-summary">
+                    <div class="name">단디</div>
+                    <div class="text">야구 그만봐야지..</div>
+                    <div class="time">21:30</div>
+                </div>
+            </div>
+            <div class="chat-item" data-friend="winzi">
+                <div class="avatar">W</div>
+                <div class="message-summary">
+                    <div class="name">윈지</div>
+                    <div class="text">요즘 야구 재밌지않아??</div>
+                    <div class="time">21:35</div>
+                </div>
+            </div>
+            <div class="chat-item" data-friend="harang">
+                <div class="avatar">H</div>
+                <div class="message-summary">
+                    <div class="name">하랑이</div>
+                    <div class="text">우리팀 왜저래 ...</div>
+                    <div class="time">21:38</div>
+                </div>
+            </div>
+            <div class="chat-item" data-friend="turkdo">
+                <div class="avatar">T</div>
+                <div class="message-summary">
+                    <div class="name">턱돌이</div>
+                    <div class="text">내일 직관가실??</div>
+                    <div class="time">22:20</div>
+                </div>
+            </div>
+        </div>
+        <div class="chats">
+            <div class="chat" id="suri-chat" data-friend="suri" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">S</div>
+                    <div class="message">
+                        <div class="name">수리</div>
+                        <div class="text"> 야구 시작한다!!</div>
+                        <div class="time">18:30</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="randy-chat" data-friend="randy" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">R</div>
+                    <div class="message">
+                        <div class="name">랜디</div>
+                        <div class="text">오늘 날씨 어때?</div>
+                        <div class="time">19:30</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="chulwoog-chat" data-friend="chulwoog" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">C</div>
+                    <div class="message">
+                        <div class="name">철웅이</div>
+                        <div class="text">오늘 진짜 못하네..</div>
+                        <div class="time">20:30</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="lucky-chat" data-friend="lucky" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">L</div>
+                    <div class="message">
+                        <div class="name">럭키</div>
+                        <div class="text">오늘 왜저래??</div>
+                        <div class="time">20:00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="bigto-chat" data-friend="bigto" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">B</div>
+                    <div class="message">
+                        <div class="name">빅또리</div>
+                        <div class="text">오늘도 이겼다~!!</div>
+                        <div class="time">21:10</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="leo-chat" data-friend="leo" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">L</div>
+                    <div class="message">
+                        <div class="name">레오</div>
+                        <div class="text">날씨 진짜 더워 ㅠㅠ</div>
+                        <div class="time">21:11</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="dandy-chat" data-friend="dandy" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">D</div>
+                    <div class="message">
+                        <div class="name">단디</div>
+                        <div class="text">야구 그만봐야지..</div>
+                        <div class="time">21:30</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="winzi-chat" data-friend="winzi" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">W</div>
+                    <div class="message">
+                        <div class="name">윈지</div>
+                        <div class="text">요즘 야구 재밌지않아??</div>
+                        <div class="time">21:35</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="harang-chat" data-friend="harang" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">H</div>
+                    <div class="message">
+                        <div class="name">하랑이</div>
+                        <div class="text">우리팀 왜저래 ...</div>
+                        <div class="time">21:38</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat" id="turkdo-chat" data-friend="turkdo" style="display: none;">
+                <div class="chat-item">
+                    <div class="avatar">T</div>
+                    <div class="message">
+                        <div class="name">턱돌이</div>
+                        <div class="text">내일 직관가실??</div>
+                        <div class="time">22:20</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
